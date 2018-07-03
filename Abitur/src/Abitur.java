@@ -2,8 +2,6 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.stream.Stream;
 
 public class Abitur {
 
@@ -16,6 +14,7 @@ public class Abitur {
 		System.out.println(durchschnitt(kernfaecher));
 		System.out.println(durchschnitt(pflichtfaecher));
 		System.out.println(durchschnittgesamt(kernfaecher, pflichtfaecher));
+		importFile();
 
 	}
 	
