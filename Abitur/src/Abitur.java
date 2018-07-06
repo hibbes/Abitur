@@ -70,10 +70,12 @@ public class Abitur {
 	    } // end try
 
 	    for (int i = 0; i<array[0].length; i++){
-	    	kernfaecher[i]= Integer.parseInt(array[0][i]);
+	    	if(array[0][i]!=null){
+	    		kernfaecher[i]= Integer.parseInt(array[0][i]);}
 	    }
 	    for (int i = 0; i<array[0].length; i++){
-	    	pflichtfaecher[i]= Integer.parseInt(array[1][i]);
+	    	if(array[1][i]!=null){
+	    		pflichtfaecher[i]= Integer.parseInt(array[1][i]);}
 	    }
 	   	    
 	} // end importFile
