@@ -24,8 +24,10 @@ public class Abitur {
 	
 	private static double durchschnitt(int[] punkte){
 		double durchschnitt = 0;
+	//	int teiler=
 		
 		for(int i=0; i<punkte.length; i++){
+			
 			durchschnitt=durchschnitt+punkte[i];
 		}
 		
