@@ -5,16 +5,20 @@ import java.io.IOException;
 
 public class Abitur {
 
-	private static int[] kernfaecher = {8,2,10,3,9,11,15,6,9,10};
-	private static int[] pflichtfaecher = {8,7,9};
+	private static int[] kernfaecher = new int[10];
+	private static int[] pflichtfaecher = new int[10];
+	
 	static String[][] array = new String[10][];
 	
 	
 	public static void main(String[] args) {
+		importFile();
 		System.out.println(durchschnitt(kernfaecher));
 		System.out.println(durchschnitt(pflichtfaecher));
 		System.out.println(durchschnittgesamt(kernfaecher, pflichtfaecher));
-		importFile();
+		
+		
+		System.out.println(toString(array));
 
 	}
 	
@@ -65,9 +69,31 @@ public class Abitur {
 	        System.exit(1);
 	    } // end try
 
-	    
-	    
+	    for (int i = 0; i<array[0].length; i++){
+	    	kernfaecher[i]= Integer.parseInt(array[0][i]);
+	    }
+	    for (int i = 0; i<array[0].length; i++){
+	    	pflichtfaecher[i]= Integer.parseInt(array[1][i]);
+	    }
+	   	    
 	} // end importFile
 
 
+	public static String toString(String array[][]){
+		
+		String Noten=null;
+		
+				
+		for (int i=0; i<2; i++){
+			if(i==0){Noten = "Kernfächer:\n";}
+				else{Noten = Noten+"Pflichtfächer:\n";};
+			
+			for(int j=0; j<array[i].length;j++){
+				Noten = Noten+(array[i][j]+" ");
+			}
+			Noten = Noten+("\n");
+			
+		}
+		return Noten;
+	}
 }
