@@ -24,14 +24,16 @@ public class Abitur {
 	
 	private static double durchschnitt(int[] punkte){
 		double durchschnitt = 0;
-	//	int teiler=
+		int teiler=0;
 		
 		for(int i=0; i<punkte.length; i++){
-			
-			durchschnitt=durchschnitt+punkte[i];
+			if(punkte[i]!=0){
+				durchschnitt=durchschnitt+punkte[i];
+				teiler++;
+			}
 		}
 		
-		return durchschnitt/punkte.length;
+		return durchschnitt/teiler;
 	}
 	
 	private static double durchschnittgesamt(int[]kernfaecher, int[] pflichtfaecher){
